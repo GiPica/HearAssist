@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(180deg, #B8D4F0 0%, #C9B8E8 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 390px;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(180deg, #B8D4F0 0%, #C9B8E8 100%);
+  overflow: hidden;
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1.5rem;
+  }
+
+  .glass-dark {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1.5rem;
+  }
+
+  .text-navy { color: #1B2A6B; }
+  .text-purple-accent { color: #7B5EA7; }
+  .bg-navy { background-color: #2D3A8C; }
+  .bg-navy-dark { background-color: #1B2A6B; }
+
+  .neumorphic {
+    background: #c4d4e8;
+    box-shadow: 6px 6px 12px #a3b4cc, -6px -6px 12px #e5f4ff;
+    border-radius: 50%;
+  }
+
+  .caption-bubble {
+    background: rgba(123, 94, 167, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 1rem;
+  }
+}
+
+.text-size-sm { font-size: 0.875rem; }
+.text-size-md { font-size: 1rem; }
+.text-size-lg { font-size: 1.2rem; }
+
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+}
+
+.animate-pulse-scale {
+  animation: pulse-scale 2s ease-in-out infinite;
+}
+
+@keyframes progress-bar {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
