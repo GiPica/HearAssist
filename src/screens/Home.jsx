@@ -2,12 +2,11 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '../context/AppContext'
 import GlassCard from '../components/GlassCard'
-import HearAssistLogo from '../components/HearAssistLogo'
 
 function SessionCard({ session, onClick }) {
   return (
     <GlassCard onClick={onClick} className="flex items-center gap-3 mb-3">
-      <span className="text-2xl">🎓</span>
+      <img src="/transcript-logo.png" alt="Transcript" className="w-8 h-8 object-contain" />
       <div className="flex-1 min-w-0">
         <div className="text-[#1B2A6B] font-bold text-sm truncate">{session.title}</div>
         <div className="text-[#7B5EA7]/80 text-xs mt-0.5">
@@ -24,12 +23,12 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" style={{ backgroundImage: 'url(/bg2-logo.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 pt-5 pb-3">
         <div className="flex items-center gap-2">
-          <HearAssistLogo size={34} />
-          <span className="font-extrabold tracking-widest text-base">
+          <img src="/logo.png" alt="HearAssist Logo" className="w-12 h-12 object-contain" />
+          <span className="font-bold tracking-wide text-xl" style={{ fontFamily: 'Alata, sans-serif' }}>
             <span className="text-[#1B2A6B]">HEAR</span>
             <span className="text-[#7B5EA7]">ASSIST</span>
           </span>
@@ -69,28 +68,23 @@ export default function Home() {
             <div className="text-[#1B2A6B] text-xl font-bold">Welcome,</div>
             <div className="text-[#1B2A6B] text-xl font-bold">{userName}!</div>
           </div>
-          <div className="w-12 h-12 rounded-full bg-[#2D3A8C]/20 flex items-center justify-center">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <circle cx="14" cy="10" r="5" fill="#1B2A6B"/>
-              <path d="M4 24c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#1B2A6B" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-          </div>
+          <img src="/user-logo.png" alt="User" className="w-20 h-20 object-contain" />
         </GlassCard>
 
         {/* Mode cards */}
         <div className="grid grid-cols-2 gap-4 mb-6">
           <GlassCard
             onClick={() => navigate('/lecture-mode')}
-            className="flex flex-col items-center justify-center py-6 gap-2"
+            className="flex flex-col items-center justify-between py-6 gap-2 min-h-[160px]"
           >
-            <span className="text-4xl">🎓</span>
+            <img src="/lecture-icon.png" alt="Lecture" className="w-20 h-20 object-contain" />
             <span className="text-[#1B2A6B] font-bold text-sm text-center leading-tight">LECTURE<br/>MODE</span>
           </GlassCard>
           <GlassCard
             onClick={() => navigate('/conversation-mode')}
-            className="flex flex-col items-center justify-center py-6 gap-2"
+            className="flex flex-col items-center justify-between py-6 gap-2 min-h-[160px]"
           >
-            <span className="text-4xl">💬</span>
+            <img src="/conversation-icon.png" alt="Conversation" className="w-20 h-20 object-contain" />
             <span className="text-[#1B2A6B] font-bold text-sm text-center leading-tight">CONVERSATION<br/>MODE</span>
           </GlassCard>
         </div>
@@ -99,7 +93,7 @@ export default function Home() {
         <div className="mb-4">
           <h2 className="text-xl font-extrabold mb-3">
             <span className="text-[#1B2A6B]">Recent </span>
-            <span className="text-[#7B5EA7]">Sessions</span>
+            <span className="text-[#1B2A6B]">Sessions</span>
           </h2>
           {sessions.length === 0 ? (
             <GlassCard>

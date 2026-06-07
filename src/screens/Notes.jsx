@@ -37,7 +37,7 @@ export default function Notes() {
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <div className="flex items-center gap-3 px-5 pt-5 pb-1">
-        <button onClick={() => navigate(-1)} className="text-[#1B2A6B] font-bold text-2xl leading-none">‹</button>
+        <button onClick={() => navigate('/summary', { state: { session } })} className="text-[#1B2A6B] font-bold text-2xl leading-none">‹</button>
         <h1 className="text-2xl font-extrabold">
           <span className="text-[#1B2A6B]">YOUR </span><span className="text-[#7B5EA7]">NOTES</span>
         </h1>

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useApp } from '../context/AppContext'
-import HearAssistLogo from '../components/HearAssistLogo'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -17,10 +16,10 @@ export default function Login() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-8">
+    <div className="flex flex-col items-center justify-center min-h-screen px-6 py-8" style={{ backgroundImage: 'url(/bg-login.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="flex flex-col items-center mb-8">
-        <HearAssistLogo size={80} />
-        <h1 className="mt-3 text-3xl font-extrabold tracking-widest">
+        <img src="/logo.png" alt="HearAssist Logo" className="w-24 h-24 object-contain" />
+        <h1 className="mt-3 text-3xl font-bold tracking-wide" style={{ fontFamily: 'Alata, sans-serif' }}>
           <span className="text-[#1B2A6B]">HEAR</span>
           <span className="text-[#7B5EA7]">ASSIST</span>
         </h1>
