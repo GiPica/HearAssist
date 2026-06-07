@@ -49,7 +49,7 @@ export default function Analysis() {
   }, [])
 
   return (
-    <div className="flex flex-col min-h-screen px-5">
+    <div className="flex flex-col min-h-screen px-5" style={{ backgroundImage: 'url(/bg-login.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="pt-5 pb-4">
         <h1 className="text-2xl font-extrabold text-center">
           <span className="text-[#1B2A6B]">ANALYSIS IN </span>

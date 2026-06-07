@@ -23,7 +23,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className="flex flex-col min-h-screen" style={{ backgroundImage: 'url(/bg2-logo.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="flex flex-col min-h-screen" style={{ backgroundImage: 'url(/bg-login.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 pt-5 pb-3">
         <div className="flex items-center gap-2">

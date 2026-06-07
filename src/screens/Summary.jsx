@@ -21,7 +21,7 @@ export default function Summary() {
   const highlightCount = session.highlights?.length ?? 0
 
   return (
-    <div className="flex flex-col min-h-screen px-5">
+    <div className="flex flex-col min-h-screen px-5" style={{ backgroundImage: 'url(/bg-login.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Header */}
       <div className="flex items-center gap-3 pt-5 pb-1">
         <button onClick={() => navigate('/home')} className="text-[#1B2A6B] font-bold text-2xl leading-none">‹</button>

@@ -114,7 +114,7 @@ export default function ActiveSession() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" style={{ backgroundImage: 'url(/bg-login.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Header */}
       <div className="flex items-center gap-3 px-5 pt-5 pb-2">
         <button onClick={() => navigate(-1)} className="text-[#1B2A6B] font-bold text-2xl leading-none">‹</button>

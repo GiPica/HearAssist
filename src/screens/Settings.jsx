@@ -14,7 +14,7 @@ export default function Settings() {
   ]
 
   return (
-    <div className="flex flex-col min-h-screen px-5">
+    <div className="flex flex-col min-h-screen px-5" style={{ backgroundImage: 'url(/bg-login.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Header */}
       <div className="flex items-center gap-3 pt-5 pb-4">
         <button onClick={() => navigate(-1)} className="text-[#1B2A6B] font-bold text-2xl leading-none">‹</button>

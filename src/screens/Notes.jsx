@@ -6,7 +6,6 @@ function NoteCard({ icon, title, children }) {
   return (
     <GlassCard className="mb-3">
       <div className="flex items-center gap-2 mb-2">
-        <span className="text-xl">{icon}</span>
         <span className="text-[#1B2A6B] font-bold text-sm">{title}</span>
       </div>
       {children}
@@ -34,7 +33,7 @@ export default function Notes() {
   const timestamp = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" style={{ backgroundImage: 'url(/bg-login.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
       {/* Header */}
       <div className="flex items-center gap-3 px-5 pt-5 pb-1">
         <button onClick={() => navigate('/summary', { state: { session } })} className="text-[#1B2A6B] font-bold text-2xl leading-none">‹</button>
