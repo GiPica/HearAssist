@@ -16,7 +16,7 @@ Malaya (Semester 2, 2025/2026) by Group OCC 1.
 You open the app, pick Lecture or Conversation mode, and hit start. 
 It listens through your microphone and shows captions as people speak. 
 You can star important lines to save them as key points. When you're done, 
-it summarizes everything into structured notes using AI — overview, key 
+it summarizes everything into structured notes using AI such as overview, key 
 points, and keywords. You can export the whole thing as a PDF.
 
 ---
